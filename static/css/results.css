@@ -1,0 +1,55 @@
+/* General styling for results page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 40px;
+}
+
+/* Form Container */
+.container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+video {
+    display: block;
+    width: 50%;
+    max-width: 45%; /* Adjusts the video size to fit the screen */
+    height: auto;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+a {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #2980b9;
+}

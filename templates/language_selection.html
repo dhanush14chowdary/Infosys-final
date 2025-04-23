@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/language_selection.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Select Translation Language</h1>
+        <form id="language-form" action="/translate" method="post">
+            <input type="hidden" name="video_path" value="{{ video_path }}">
+            <label for="language">Enter Language:</label>
+            <input type="text" name="language" id="language" placeholder="e.g., Spanish, French" required>
+            <span class="tooltip" id="language-tooltip">Type a language for translation.</span>
+            <button type="submit">Translate</button>
+        </form>
+        
+        <!-- Progress Bar -->
+        <div id="progress-container" class="progress-container" style="display: none;">
+            <label for="progress-bar">Processing...</label>
+            <!-- <progress id="progress-bar" value="0" max="100"></progress> -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/language_selection.js') }}"></script>
+</body>
+</html>

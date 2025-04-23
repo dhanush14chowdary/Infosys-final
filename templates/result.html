@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translated Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+    <script src="{{ url_for('static', filename='js/results.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Translated Video</h1>
+        <video controls>
+            <source src="{{ url_for('static', filename=translated_video.split('static/')[-1]) }}" type="video/mp4">
+        </video>
+        <div class="button-container">
+            <a href="{{ url_for('download_file', filename=translated_video.split('static/')[-1]) }}" class="download-btn">Download Video</a>
+        </div>
+    </div>
+</body>
+</html>
